@@ -2,10 +2,36 @@ class Earthquake implements Comparable<Earthquake> {
     String country, city;
     double magnitude;
     int year;
+    String date;
 
     public Earthquake(String country, String city, double magnitude, int year) {
         this.country = country;
         this.city = city;
+        this.magnitude = magnitude;
+        this.year = year;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public Earthquake(String country, double magnitude, String date) {
+        this.country = country;
+        this.magnitude = magnitude;
+        this.date = date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public Earthquake(String country, double magnitude) {
+        this.country = country;
+        this.magnitude = magnitude;
+    }
+
+    public Earthquake(String country, double magnitude, int year) {
+        this.country = country;
         this.magnitude = magnitude;
         this.year = year;
     }

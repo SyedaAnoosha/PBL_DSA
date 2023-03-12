@@ -1,12 +1,15 @@
+package extract;
+
 import eu.bitm.NominatimReverseGeocoding.Address;
 import eu.bitm.NominatimReverseGeocoding.NominatimReverseGeocodingJAPI;
+
 import java.io.*;
 import java.text.SimpleDateFormat;
-import java.util.*;
+import java.util.Date;
 
 public class Extraction {
+    public static void main(String[] args) throws IOException {
 
-    public void storing() throws IOException {
         NominatimReverseGeocodingJAPI n = new NominatimReverseGeocodingJAPI();
 
         File file = new File("D:\\PBL\\Valid countries and cities.csv");

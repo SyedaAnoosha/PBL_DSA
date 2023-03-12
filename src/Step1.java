@@ -1,8 +1,14 @@
-import java.io.*;
-import java.util.*;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 public class Step1 {
     public static HashMap<Integer, List<Earthquake>>[] yearlyEQS = new HashMap[52];
+    public ArrayList<Object>[] storeEarthquakeData = new ArrayList[]{new ArrayList<>(52)};
     public void storing() throws IOException {
 
         File file = new File("D:\\PBL\\Valid countries and cities.txt");
@@ -35,14 +41,30 @@ public class Step1 {
                 j++;
                 i++;
                 y=year;
-                list[i] =  new ArrayList<>();
+                list[i] = new ArrayList<>();
             }
 
             list[i].add(new Earthquake(country, city, magnitude, year));
-            System.out.println("Year: " + year + "\nMagnitude: " + magnitude + "\nCountry: " + country + "\nCity: " + city+"\n");
+           // System.out.println("Year: " + year + "\nMagnitude: " + magnitude + "\nCountry: " + country + "\nCity: " + city+"\n");
 
             yearlyEQS[j].put(year,list[i]);
             L++;
+        }
+
+    }
+    public void getYearlyEarthquakes(){
+        int u = 1965;
+        for (int k = 0; k < yearlyEQS.length; k++) {
+            HashMap<Integer, List<Earthquake>> recent = yearlyEQS[k];
+            for (int l = 0; l < recent.size(); l++) {
+                List<Earthquake> eqlist = recent.get(u);
+                for (int m = 0; m < eqlist.size(); m++) {
+                    Earthquake eq = eqlist.get(m);
+                    System.out.println("\nYear: "+eq.getYear()+"\nMagnitude: "+eq.getMagnitude()+"\nCity: "+eq.getCity()+"\nCountry: "+eq.getCountry());
+                }
+            }
+            u++;
+
         }
 
     }

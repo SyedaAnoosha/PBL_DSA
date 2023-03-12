@@ -1,46 +1,39 @@
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
 import java.io.IOException;
-import java.util.*;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class Step2 {
 
-    HashMap<Integer, List<Earthquake>>[] yearlyEQS = Step1.yearlyEQS;
+    public static Queue<Earthquake> maxEarthquake= new LinkedList<>();
 
-    public void biggestMagnitudeEarthquake() throws IOException {
-        Queue<Earthquake>[] earthquakeQueue = new Queue[52];
-        int years = 1965;
+    public void highestMagnitude() throws IOException {
 
-        for (int i = 0; i < earthquakeQueue.length; i++) {
-            earthquakeQueue[i] = new PriorityQueue<>();
+        File f = new File("D:\\PBL\\Max Magnitude.txt");
+        BufferedReader br = new BufferedReader(new FileReader(f));
+        String line = "";
+
+        while((line=br.readLine()) != null){
+
+            String[] read = line.split(": ");
+            String country = read[0];
+            String[] data= read[1].split(",");
+            double mag = Double.parseDouble(data[0]);
+            int year = Integer.parseInt(data[1]);
+            //System.out.println(country +" "+mag+" "+year);
+            maxEarthquake.add(new Earthquake(country,mag,year));
         }
+    }
 
-        for (int i = 0; i < yearlyEQS.length; i++) {
-
-            double maxMag = 0;
-            Earthquake maxEQ = null;
-
-            HashMap<Integer, List<Earthquake>> yearMap = yearlyEQS[i];
-            List<Earthquake> eqList = yearMap.get(years);
-
-            //System.out.println("Year " + years + ": " + eqList.size() + " earthquakes");
-            Collections.sort(eqList);
-
-            for (Earthquake eq : eqList) {
-                if (eq.getMagnitude() > maxMag) {
-                    maxMag = eq.getMagnitude();
-                    maxEQ = eq;
-                }
+    public void problem2(){
+        System.out.println("\n\n        -------- Problem 2 -------- ");
+        while(!maxEarthquake.isEmpty()){
+            Earthquake e = maxEarthquake.poll();
+            if(e.getYear() >= 2005 && e.getYear() <= 2015 ) {
+                System.out.println("\nYear: "+e.getYear()+"\nHighest Magnitude: "+e.getMagnitude()+"  Country: "+e.getCountry());
             }
-
-            earthquakeQueue[i].offer(maxEQ); //offer is used to insert earthquake of possible otherwise return false
-            years++;
-        }
-
-        for (int i = 0; i < earthquakeQueue.length; i++) {
-            Earthquake e = earthquakeQueue[i].peek();
-            if (e != null) {
-                System.out.println(e.getMagnitude()+" "+e.getYear());
-            }
-
         }
     }
 }
