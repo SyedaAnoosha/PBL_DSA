@@ -1,11 +1,11 @@
 public class Main {
     public static void main(String[] args) throws Exception {
 
-        //-------Step1------
-        System.out.println("\n");
-        Step1 step1 = new Step1();
-        step1.storing();
-        step1.getYearlyEarthquakes();
+//        //-------Step1------
+//        Step1 step1 = new Step1();
+//        step1.storing();
+//        step1.getYearlyEarthquakes();
+
 
 //        //-------Step2------
 //        System.out.println("\n");
@@ -21,9 +21,9 @@ public class Main {
 //        Step4 step4 = new Step4();
 //        step4.recentEarthquakesLL();
 
-
 //        //------Problem 1-------
 //        System.out.println("\n");
+//        step1.getAverageCountries();
 //        System.out.println(step3.countryWithMostNumberOfEQ());
 
 //        //------Problem 2-------
