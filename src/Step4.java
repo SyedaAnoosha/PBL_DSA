@@ -11,13 +11,15 @@ public class Step4 {
     LinkedList<Object> mostRecentEQ = new LinkedList<>();
 
     public Step4() throws IOException {}
-    public void recentEarthquakesLL() throws IOException {
-
+    public void storeMostRecentEarthquake(){
         for (int i = 0; i <  newStack.length; i++) {
             if(newStack[i] != null) {
                 mostRecentEQ.add(newStack[i].peek());
             }
         }
+    }
+    public void getMostRecentEarthquake() throws IOException {
+
         System.out.println("Enter the country for getting its record");
         String country = sc.nextLine();
         int index = step3.countryIndex(country);
@@ -31,10 +33,11 @@ public class Step4 {
         System.out.println("Most recent Earthquake in "+ mostRecentEQ.get(index));
 
     }
-    public void problem4(){
+    public void problem4() {
+
         System.out.println("\n\n        -------- Problem 4 -------- ");
 
-
+        System.out.println("All the Most Recent Earthquakes in all the countries above 6 Magnitude: \n");
         double maxMag = 6.0;
         for (int i = 0; i < mostRecentEQ.size(); i++) {
             String data = mostRecentEQ.get(i).toString();

@@ -70,9 +70,6 @@ public class Step3 {
     }
     public void problem3() throws IOException {
 
-        System.out.println("\n\n        -------- Problem 3 -------- ");
-
-
         System.out.println("Enter country name:");
         String country = sc.nextLine();
         int index = countryIndex(country);
@@ -95,6 +92,18 @@ public class Step3 {
         }
     }
 
-
+    public void countryWithMostNumberOfEQ(){
+        int num = 0;
+        String country = "";
+        for (int i = 0; i < recentEQ.length ; i++) {
+            int size = recentEQ[i].size();
+            if(size > num){
+                country = String.valueOf(recentEQ[i].peek());
+                country = country.substring(0,country.indexOf(":"));
+                num = size;
+            }
+        }
+        System.out.println("Most vulnerable country to earthquakes is "+country+" with "+num+" number of earthquakes.");
+    }
 
 }
