@@ -95,16 +95,6 @@ public class Step3 {
         }
     }
 
-    public int countryWithMostNumberOfEQ(){
-        int num = 0;
-        for (int i = 0; i < recentEQ.length ; i++) {
-            int size = recentEQ[i].size();
-            if(size > num){
-                num = size;
-            }
-        }
-        return num;
-    }
 
 
 }

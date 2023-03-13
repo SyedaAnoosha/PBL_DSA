@@ -22,7 +22,6 @@ public class Step2 {
             String[] data= read[1].split(",");
             double mag = Double.parseDouble(data[0]);
             int year = Integer.parseInt(data[1]);
-            //System.out.println(country +" "+mag+" "+year);
             maxEarthquake.add(new Earthquake(country,mag,year));
         }
     }

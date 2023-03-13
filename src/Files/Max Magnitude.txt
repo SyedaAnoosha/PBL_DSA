@@ -1,0 +1,52 @@
+Indonesia: 8.2,1965
+Perú: 8.1,1966
+Türkiye: 7.4,1967
+Philippines: 7.6,1968
+Indonesia: 7.6,1969
+Colombia: 8.0,1970
+Papua Niugini: 8.1,1971
+United States: 7.6,1972
+日本: 7.7,1973
+Perú: 7.6,1974
+Philippines: 5.6,1975
+Philippines: 7.9,1976
+Solomon Islands: 7.5,1977
+México: 7.7,1978
+Indonesia: 7.9,1979
+Algérie / ⵍⵣⵣⴰⵢⴻⵔ / الجزائر: 7.3,1980
+México: 7.3,1981
+Philippines: 7.1,1982
+Papua Niugini: 7.6,1983
+Solomon Islands: 7.6,1984
+México: 8.0,1985
+Indonesia: 7.5,1986
+Chile: 7.6,1987
+中国: 7.7,1988
+Papua Niugini: 7.1,1989
+Indonesia: 7.8,1990
+Costa Rica: 7.6,1991
+Indonesia: 7.8,1992
+日本: 7.6,1993
+Bolivia: 8.2,1994
+Chile: 8.0,1995
+Indonesia: 7.9,1996
+Россия: 7.8,1997
+Indonesia: 7.7,1998
+臺灣: 7.7,1999
+Papua Niugini: 8.0,2000
+Perú: 8.4,2001
+United States: 7.9,2002
+México: 7.6,2003
+Indonesia: 9.1,2004
+Indonesia: 8.6,2005
+Россия: 7.6,2006
+Indonesia: 8.4,2007
+中国: 7.9,2008
+New Zealand/Aotearoa: 7.8,2009
+Chile: 8.8,2010
+Chile: 7.2,2011
+Canada: 7.8,2012
+ایران: 7.7,2013
+United States: 7.9,2014
+Chile: 8.3,2015
+Papua Niugini: 7.9,2016

@@ -10,16 +10,16 @@ public class Step1 {
 
     public void storing() throws IOException {
 
+        for (int i = 0; i < storeEarthquakeData.length; i++) {
+            storeEarthquakeData[i] = new ArrayList<>();
+        }
+
         File file = new File("D:\\PBL\\Valid countries and cities.txt");
 
         FileReader fileReader = new FileReader(file);
         BufferedReader br = new BufferedReader(fileReader);
         String line;
         br.readLine();
-
-        for (int i = 0; i < storeEarthquakeData.length; i++) {
-            storeEarthquakeData[i] = new ArrayList<>();
-        }
 
         int y = 1965, L = 0, i = 0;
         while ((line = br.readLine()) != null && L<1103) {
@@ -36,6 +36,7 @@ public class Step1 {
             storeEarthquakeData[i].add(line);
             L++;
         }
+        br.close();
 
     }
     public void getYearlyEarthquakes(){
