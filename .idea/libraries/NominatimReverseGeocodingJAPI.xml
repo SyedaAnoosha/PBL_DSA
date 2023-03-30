@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="NominatimReverseGeocodingJAPI">
+    <CLASSES>
+      <root url="file://$USER_HOME$/Downloads/NominatimReverseGeocodingJAPI" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$USER_HOME$/Downloads/NominatimReverseGeocodingJAPI" />
+    </SOURCES>
+    <jarDirectory url="file://$USER_HOME$/Downloads/NominatimReverseGeocodingJAPI" recursive="false" />
+    <jarDirectory url="file://$USER_HOME$/Downloads/NominatimReverseGeocodingJAPI" recursive="false" type="SOURCES" />
+  </library>
+</component>

@@ -9,7 +9,8 @@ public class Step3 {
     public static Stack<Object>[] recentEQ = new Stack[110];
     Scanner sc = new Scanner(System.in);
 
-    public static String[] countries = {"United States", "中国", "Indonesia", "ایران", "Philippines", "Chile", "Vanuatu", "臺灣", "Papua Niugini",
+    public static String[] countries = {
+            "United States", "中国", "Indonesia", "ایران", "Philippines", "Chile", "Vanuatu", "臺灣", "Papua Niugini",
             "Ελλάς", "Argentina", "नेपाल", "日本", "México", "República Dominicana", "Solomon Islands", "South Georgia and the South Sandwich Islands",
             "Colombia", "Perú", "Antigua and Barbuda", "Zambia", "Guatemala", "မြန်မာ", "République démocratique du Congo", "New Zealand/Aotearoa",
             "Venezuela", "Монгол улс ᠮᠤᠩᠭᠤᠯ ᠤᠯᠤᠰ", "Bolivia", "Россия", "Türkiye", "Тоҷикистон", "France", "Brasil", "India", "Ecuador", "Tonga",
@@ -31,6 +32,7 @@ public class Step3 {
         }
         return -1;
     }
+
 
     public Stack<Object>[] getStack() throws IOException {
 
@@ -69,6 +71,7 @@ public class Step3 {
 
     }
     public void problem3() throws IOException {
+/*
 
         System.out.println("Enter country name:");
         String country = sc.nextLine();
@@ -82,13 +85,17 @@ public class Step3 {
 
         System.out.println("Number of recent Earthquakes you want to get: ");
         int recentNumber = sc.nextInt();
+*/
 
-        Stack<Object>[] recentStack = getStack();
-        Object[] arr = recentStack[index].toArray();
 
-        int length = arr.length - recentNumber;
-        for (int i = length; i < arr.length ; i++) {
-            System.out.println(arr[i]);
+
+
+        for (int i = 0; i < getStack().length ; i++) {
+            Object[] arr = getStack()[i].toArray();
+            int length = arr.length-5;
+            for (int j = length; j < arr.length; j++) {
+                System.out.println(arr[j]);
+            }
         }
     }
 

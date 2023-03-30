@@ -1,7 +1,4 @@
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.*;
 
 public class Step1 {
@@ -31,10 +28,10 @@ public class Step1 {
             if(year!=y) {
                 i++;
                 y=year;
-                storeEarthquakeData[i] = new ArrayList<>();
             }
             storeEarthquakeData[i].add(line);
             L++;
+
         }
         br.close();
 

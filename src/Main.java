@@ -16,13 +16,13 @@ public class Main {
 //
         //------Step3-------
 //        System.out.println("\n\n        -------- Step 3 -------- ");
-//        Step3 step3 = new Step3();
+        Step3 step3 = new Step3();
 //        step3.getAllRecentEarthquake();
 //
 //        //------Step4-------
-        System.out.println("\n\n        -------- Step 4 -------- ");
-        Step4 step4 = new Step4();
-        step4.storeMostRecentEarthquake();
+//        System.out.println("\n\n        -------- Step 4 -------- ");
+//        Step4 step4 = new Step4();
+//        step4.storeMostRecentEarthquake();
 //        step4.getMostRecentEarthquake();
 //
         //------Problem 1-------
@@ -36,11 +36,11 @@ public class Main {
 //
 //        //------Problem 3-------
 //        System.out.println("\n\n        -------- Problem 3 -------- ");
-//        step3.problem3();
+        step3.problem3();
 //
         //------Problem 4-------
-        System.out.println("\n\n        -------- Problem 4 -------- ");
-        step4.problem4();
+//        System.out.println("\n\n        -------- Problem 4 -------- ");
+//        step4.problem4();
 
 
     }

@@ -35,8 +35,6 @@ public class Step4 {
     }
     public void problem4() {
 
-        System.out.println("\n\n        -------- Problem 4 --------  ");
-
         System.out.println("All the Most Recent Earthquakes in all the countries above 6 Magnitude: \n");
         double maxMag = 6.0;
         for (int i = 0; i < mostRecentEQ.size(); i++) {
@@ -47,8 +45,5 @@ public class Step4 {
                 System.out.println(data);
             }
         }
-
-
-
     }
 }

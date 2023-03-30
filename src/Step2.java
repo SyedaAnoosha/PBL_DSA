@@ -7,7 +7,7 @@ import java.util.Queue;
 
 public class Step2 {
 
-    public  Queue<Earthquake> maxEarthquake= new LinkedList<>();
+    public Queue<Earthquake> maxEarthquake= new LinkedList<>();
 
     public void highestMagnitude() throws IOException {
 
@@ -25,18 +25,12 @@ public class Step2 {
             maxEarthquake.add(new Earthquake(country,mag,year));
         }
     }
-    public void getYearlyMaxEarthquake(){
-       Earthquake[] arr = maxEarthquake.toArray(new Earthquake[0]);
-        for (int i = 0; i < arr.length; i++) {
-            System.out.println("\nYear: "+arr[i].getYear()+"\nHighest Magnitude: "+arr[i].getMagnitude()+"  Country: "+arr[i].getCountry());
-        }
-    }
 
     public void problem2(){
         Earthquake[] arr = maxEarthquake.toArray(new Earthquake[0]);
         for (int i = 0; i < arr.length; i++) {
             if(arr[i].getYear() >= 2005 && arr[i].getYear() <= 2015 ) {
-                System.out.println("\nYear: "+arr[i].getYear()+"\nHighest Magnitude: "+arr[i].getMagnitude()+"  Country: "+arr[i].getCountry());
+                System.out.println("Magnitude: "+arr[i].getMagnitude()+"  Country: "+arr[i].getCountry());
             }
         }
     }
